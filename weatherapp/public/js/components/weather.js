@@ -18,13 +18,15 @@ angular.module('weatherApp')
         }).catch((error) => {
           this.error = error;
         });
-
-        WeatherService.webcam(city).then((data) => {
-          this.data = data;
-        }).catch((error) => {
-          this.error = error;
-        });
       }
+
+      this.getWebcam = (data) => {
+      WeatherService.webcam(data).then((data) => {
+        this.data = data;
+      }).catch((error) => {
+        this.error = error;
+      });
+    }
 
     }
 
