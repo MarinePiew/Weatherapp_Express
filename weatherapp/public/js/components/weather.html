@@ -1,24 +1,25 @@
-<md-content layout-padding>
-  <div layout-gt-xs="row" layout="column">
-    <div flex-gt-xs="50" flex>
-      <form ng-submit="$ctrl.getWeather($ctrl.query)">
-        <md-input-container>
-          <label>La météo de votre ville</label>
-          <input ng-model="$ctrl.query" />
-        </md-input-container>
-      </form>
-    </div>
-    <div flex-gt-xs="50" flex>
-      <div layout="row">
-        <div flex="30" ng-if="$ctrl.data">
-          <img ng-src="{{$ctrl.data.icon}}" />
-        </div>
-        <div flex="70" ng-if="$ctrl.data">
-          <div>{{$ctrl.data.name}}</div>
-          <div>{{$ctrl.data.weather[0].description}}</div>
-          <div>{{$ctrl.data.main.temp}} °C</div>
-        </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form>
+      <div class="form-group">
+        <!--<label for="city">Ville</label>-->
+        <input type="text" class="form-control" id="city" placeholder="quelle temps fait-il à ..." ng-model="city">
+        <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </a>
       </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div ng-if="$ctrl.data">
+      <img ng-src="{{$ctrl.data.icon}}" />
+      <div>{{$ctrl.data.name}}</div>
+      <div>{{$ctrl.data.weather[0].description}}</div>
+      <div>{{$ctrl.data.main.temp | number:0}} °C</div>
+      <div>{{$ctrl.data.coord.lon}}</div>
+      <div>{{$ctrl.data.coord.lat}}</div>
     </div>
   </div>
-</md-content>
+</div>

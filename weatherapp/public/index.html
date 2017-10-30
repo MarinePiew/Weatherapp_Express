@@ -7,13 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather App</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body ng-app="weatherApp">
-  <h1>Weather App</h1>
-  <weather></weather>
+<!--
+  <nav class="navbar navbar-weather">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <h1>Weather App</h1>
+      </a>
+    </div>
+  </nav>
+-->
+  <div class="container-fluid" id="bg-hp">
+    <h1>Weather App</h1>
+    <weather></weather>
+  </div>
+  
 
-  <script type="text/javascript" src="vendors/angular/angular.js"></script>  
+  <script type="text/javascript" src="vendors/angular/angular.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/services/weatherService.js"></script>
   <script type="text/javascript" src="js/components/weather.js"></script>

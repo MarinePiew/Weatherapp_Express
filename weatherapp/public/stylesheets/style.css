@@ -1,8 +1,28 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#bg-hp{
+  background: url(../img/mountain.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 500px;
 }
-
-a {
-  color: #00B7FF;
+#city{
+  height: 5.5rem;
+  margin-top: 15%;
+  font-size: 2rem;
+  width: 90%;
+  display: inline-block;
+}
+.btn-search{
+  color: #606060;
+  display: inline-block;
+  height: 5.5rem;
+  width: 6rem;
+  font-size: 2.5rem;
+  padding-top: 15px;
+  background-color: #fff;
+}
+#city, .btn-search{
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input:focus { 
+  border: 1px solid #ccc;;
 }
