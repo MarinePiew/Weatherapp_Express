@@ -1,14 +1,30 @@
 body{
   overflow-x: hidden;
 }
+.navbar{
+  margin-bottom: 0px !important;
+}
 .text-uppercase{
   text-transform: uppercase;
+}
+.inline-block{
+  display: inline-block;
+}
+.container-fluid{
+  margin: 0;
+  padding: 0;
 }
 #bg-hp{
   background: url(../img/mountain.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   background-size: cover;
   height: 500px;
+}
+#bg-cold{
+  background-color: #BBDEFB;
+}
+.block-weather{
+  padding-left: 5%;
 }
 .btn-search{
   color: #606060;

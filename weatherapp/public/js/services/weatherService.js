@@ -11,6 +11,7 @@ angular.module('weatherApp')
       let defer = $q.defer();
 
       $http.get(`${API_URL}${city}&APPID=${API_KEY} `).then((response) => {
+        let CITY_DATA = this.webcam(response);
         defer.resolve(response.data);
       }).catch((error) => {
         defer.reject(error.statusText);
@@ -18,8 +19,8 @@ angular.module('weatherApp')
       return defer.promise;
     }
 
-    this.webcam = (city) => {
-     unirest.get("https://webcamstravel.p.mashape.com/webcams/list/nearby=${data.coord.lat},${data.coord.lon},10?lang=en&show=webcams%3Aimage%2Clocation")
+    this.webcam = (CITY_DATA) => {
+     unirest.get("https://webcamstravel.p.mashape.com/webcams/list/nearby=${CITY_DATA.data.coord.lat},${CITY_DATA.data.coord.lon},10?lang=en&show=webcams%3Aimage%2Clocation")
     .header("X-Mashape-Key", "VbN2gIroEBmshcKFN9zyc3zOR6Grp1y2LtWjsnRQjlrsPiUymh")
     .end((data) => {
       console.log(data.status, data.headers, data.body);
