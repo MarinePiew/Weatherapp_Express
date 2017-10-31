@@ -111,13 +111,13 @@
   </ul>
 </nav>
 
-<div class="data-city" ng-if="!$ctrl.city" ng-repeat="city in $ctrl.city">
+<div class="data-city" ng-repeat="city in $ctrl.city">
   <div class="container-fluid" id="bg-cold">
     <div class="block-weather">
-      <h2 class="inline-block">{{$ctrl.city.name}}</h3>
-        <p class="inline-block">{{$ctrl.city.weather[0].description}}</p>
+      <h2 class="inline-block">{{city.name}}</h3>
+        <p class="inline-block">{{city.weather[0].description}}</p>
         <img ng-src="{{$ctrl.data.icon}}" />
-        <h3>{{$ctrl.city.main.temp | number:0}} °C</h3>
+        <h3>{{city.main.temp | number:0}} °C</h3>
     </div>
   </div>
   <div class="container-fluid">

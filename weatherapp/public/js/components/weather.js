@@ -14,9 +14,9 @@ angular.module('weatherApp')
 
       this.getWeather = (city) => {
         WeatherService.get(city).then((data) => {
-          // this.city.push(data);
+          this.city.push(data.data);
           WeatherService.webcam(data).then((data) => {
-            this.data.result.webcams.forEach((webcam) => {
+            data.result.webcams.forEach((webcam) => {
             this.webcams.push(webcam);
             });
         }).catch((error) => {
