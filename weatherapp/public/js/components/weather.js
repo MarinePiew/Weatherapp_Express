@@ -8,25 +8,22 @@ angular.module('weatherApp')
     controller: function (WeatherService) {
 
       this.$onInit = () => {
+        this.city = [];
+        this.webcams = [];
       }
 
       this.getWeather = (city) => {
-
         WeatherService.get(city).then((data) => {
-          // Save meteo data for the requested city
-          this.data = data;
-
+          this.city.push(data.data.name);
+          WeatherService.webcam(data).then((data) => {
+            data.result.webcams.forEach((webcam) => {
+            this.webcams.push(webcam);
+            });
         }).catch((error) => {
           this.error = error;
         });
-
-        WeatherService.webcam(city).then((data) => {
-          this.data = data;
-        }).catch((error) => {
-          this.error = error;
-        });
-      }
-
+      });
     }
+  },
 
   });

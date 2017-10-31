@@ -134,3 +134,16 @@
       </div>
     </div>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-6" ng-repeat="webcam in $ctrl.webcams">
+    <a  ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player"
+    data-id={{webcam.id}}
+    data-play="day"
+    href="https://lookr.com/{{webcam.id}}"
+    webcamtarget="_blank">
+   {{webcam.title}}
+   <img src="{{webcam.image.current.preview}}" alt="">   
+    </a>
+  </div>
+</div>
