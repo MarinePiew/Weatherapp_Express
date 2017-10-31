@@ -20,11 +20,17 @@ angular.module('weatherApp')
     }
 
     this.webcam = (CITY_DATA) => {
-     unirest.get("https://webcamstravel.p.mashape.com/webcams/list/nearby=${CITY_DATA.data.coord.lat},${CITY_DATA.data.coord.lon},10?lang=en&show=webcams%3Aimage%2Clocation")
-    .header("X-Mashape-Key", "VbN2gIroEBmshcKFN9zyc3zOR6Grp1y2LtWjsnRQjlrsPiUymh")
-    .end((data) => {
-      console.log(data.status, data.headers, data.body);
-    });
-  };
-
+      let defer = $q.defer();
+      $http.get(`https://webcamstravel.p.mashape.com/webcams/list/nearby=${CITY_DATA.data.coord.lat},${CITY_DATA.data.coord.lon},10?lang=en&show=webcams%3Aimage%2Clocation`, {
+        headers: {
+          "X-Mashape-Key": "VbN2gIroEBmshcKFN9zyc3zOR6Grp1y2LtWjsnRQjlrsPiUymh"
+        }
+      }).then((response) => {
+        defer.resolve(response.data);
+        webcam_data = response.data.result.webcams;        
+      }).catch((error) => {
+        defer.reject(error.statusText);
+      });
+      return defer.promise;
+    };
   });
