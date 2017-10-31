@@ -111,13 +111,13 @@
   </ul>
 </nav>
 
-<div class="data-city" ng-if="!$ctrl.city" ng-repeat="city in $ctrl.city">
+<div class="data-city" ng-repeat="city in $ctrl.city">
   <div class="container-fluid" id="bg-cold">
     <div class="block-weather">
-      <h2 class="inline-block">{{$ctrl.city.name}}</h3>
-        <p class="inline-block">{{$ctrl.city.weather[0].description}}</p>
+      <h2 class="inline-block">{{city.name}}</h3>
+        <p class="inline-block">{{city.weather[0].description}}</p>
         <img ng-src="{{$ctrl.data.icon}}" />
-        <h3>{{$ctrl.city.main.temp | number:0}} °C</h3>
+        <h3>{{city.main.temp | number:0}} °C</h3>
     </div>
   </div>
   <div class="container-fluid">
@@ -135,15 +135,14 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-6" ng-repeat="webcam in $ctrl.webcams">
-    <a  ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player"
-    data-id={{webcam.id}}
-    data-play="day"
-    href="https://lookr.com/{{webcam.id}}"
-    webcamtarget="_blank">
-   {{webcam.title}}
-   <img src="{{webcam.image.current.preview}}" alt="">   
-    </a>
+<div class="row" id="weather__row" >
+  <div class="col-md-4" ng-repeat="webcam in $ctrl.webcams | limitTo: 6">
+    <div class="webcam__views">
+      <a id=webcams_links ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player" data-id={{webcam.id}} data-play="day"
+        href="https://lookr.com/{{webcam.id}}" webcamtarget="_blank">
+        {{webcam.title}}
+        <img src="{{webcam.image.current.preview}}" alt="webcam_weatherapp">
+      </a>
+    </div>
   </div>
 </div>
