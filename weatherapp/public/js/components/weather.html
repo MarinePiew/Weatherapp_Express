@@ -1,16 +1,18 @@
-<div class="container-fluid" id="bg-hp" ng-if="$ctrl.city">
-  <h1>Weather App</h1>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <form ng-submit="$ctrl.getWeather(city)">
-        <div class="form-group">
-          <!--<label for="city">Ville</label>-->
-          <input type="text" class="form-control" id="city" placeholder="quelle temps fait-il à ..." ng-model="city">
-          <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </a>
-        </div>
-      </form>
+<div ng-if="!$ctrl.city.length">
+  <div class="container-fluid" id="bg-hp">
+    <h1>Weather App</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form ng-submit="$ctrl.getWeather(city)">
+          <div class="form-group">
+            <!--<label for="city">Ville</label>-->
+            <input type="text" class="form-control" id="city" placeholder="quelle temps fait-il à ..." ng-model="city">
+            <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
@@ -101,52 +103,43 @@
   </div>
 </div>
 
-<nav class="navbar navbar-default" ng-if="!$ctrl.city">
-  <ul class="nav nav-tabs">
-    <h1 class="inline-block">Weather App</h1>
-    <form class="navbar-form navbar-right">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="quelle temps fait-il à ..." ng-model="city">
-      </div>
-      <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-      </a>
-    </form>
-  </ul>
-</nav>
+<div ng-if="$ctrl.city.length">
+  <nav class="navbar navbar-default">
+    <ul class="nav nav-tabs">
+      <h1 class="inline-block">Weather App</h1>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="quelle temps fait-il à ..." ng-model="city">
+        </div>
+        <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </a>
+      </form>
+    </ul>
+  </nav>
 
-<div class="data-city" ng-repeat="city in $ctrl.city">
-  <div class="container-fluid" id="bg-cold">
-    <div class="block-weather">
-      <h2 class="inline-block">{{city.name}}</h3>
-        <p class="inline-block">{{city.weather[0].description}}</p>
-        <img ng-src="{{city.icon}}" />
-        <h3>{{city.main.temp | number:0}} °C</h3>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <!-- A REMPLACER VIDEO IFRAME-->
-      <div class="col-md-4">
-        <img src="https://cdn.pixabay.com/photo/2017/04/12/19/06/lighthouse-2225445_960_720.jpg" />
-      </div>
-      <div class="col-md-4">
-        <img src="https://cdn.pixabay.com/photo/2017/04/12/19/06/lighthouse-2225445_960_720.jpg" />
-      </div>
-      <div class="col-md-4">
-        <img src="https://cdn.pixabay.com/photo/2017/04/12/19/06/lighthouse-2225445_960_720.jpg" />
+  <div class="data-city">
+    <div class="container-fluid" id="bg-cold">
+      <div class="block-weather">
+        <div ng-repeat="city in $ctrl.city">
+            <h2 class="inline-block">{{city.name}}</h3>
+              <p class="inline-block">{{city.weather[0].description}}</p>
+              <img ng-src="{{city.weather[0].icon}}" />
+              <h3>{{city.main.temp | number:0}} °C</h3>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="row" id="weather__row" >
-  <div class="col-md-4" ng-repeat="webcam in $ctrl.webcams | limitTo: 6">
-    <div class="webcam__views">
-      <a id=webcams_links ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player" data-id={{webcam.id}} data-play="day"
-        href="https://lookr.com/{{webcam.id}}" webcamtarget="_blank">
-        {{webcam.title}}
-        <img src="{{webcam.image.current.preview}}" alt="webcam_weatherapp">
-      </a>
+    <div class="container-fluid center-block">
+      <div class="row" id="weather__row">
+        <div class="col-md-4" ng-repeat="webcam in $ctrl.webcams | limitTo: 6">
+          <div class="webcam__views text-center margin-webcam">
+            <a id=webcams_links ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player" data-id={{webcam.id}} data-play="day"
+              href="https://lookr.com/{{webcam.id}}" webcamtarget="_blank">
+              {{webcam.title}}
+              <img src="{{webcam.image.current.preview}}" alt="webcam_weatherapp">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>

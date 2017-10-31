@@ -99,6 +99,13 @@ img{
   transition: .5s ease;
   background-color: #008CBA;
 }
+
+/*** page city ***/
+#webcams_links img{
+  margin: 0 auto;
+}
+.margin-webcam{
+  margin-top: 2rem;
 .card-link {
   position: absolute;
   top: 0;

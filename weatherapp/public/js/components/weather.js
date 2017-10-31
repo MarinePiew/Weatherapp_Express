@@ -23,6 +23,9 @@ angular.module('weatherApp')
           this.error = error;
         });
       });
+
+      this.city = [];
+      this.webcams = [];
     }
   },
 
