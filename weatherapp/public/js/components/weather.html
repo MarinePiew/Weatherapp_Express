@@ -5,7 +5,6 @@
       <div class="col-md-6 col-md-offset-3">
         <form ng-submit="$ctrl.getWeather(city)">
           <div class="form-group">
-            <!--<label for="city">Ville</label>-->
             <input type="text" class="form-control" id="city" placeholder="quel temps fait-il à ..." ng-model="city">
             <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -20,7 +19,7 @@
     <div class="row row-example">
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/44.840440;-0.580500-Bordeaux:nouvelle-aquitaine,france/landscape/hd,view:live,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/44.840440;-0.580500-Bordeaux:nouvelle-aquitaine,france/landscape/hd,view:live," target="_blank"></a>
           <img class="img-responsive" src="img/bordeaux.jpg" alt="bordeaux weather" title="Bordeaux">
           <div class="caption">
             <div class="text-caption center-block">
@@ -33,7 +32,7 @@
       </div>
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/34.052230;-118.243680-Los%20Angeles:california,united-states/landscape/hd,view:live,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/34.052230;-118.243680-Los%20Angeles:california,united-states/landscape/hd,view:live," target="_blank"></a>
           <img class="img-responsive" src="img/la.jpg" alt="Los Angeles weather" title="Los Angeles">
           <div class="caption">
             <div class="text-caption center-block">
@@ -47,7 +46,7 @@
 
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/36.405720;25.456820-%CE%A3%CE%B1%CE%BD%CF%84%CE%BF%CF%81%CE%AF%CE%BD%CE%B7:south-aegean,greece/landscape/hd,view:live,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/36.405720;25.456820-%CE%A3%CE%B1%CE%BD%CF%84%CE%BF%CF%81%CE%AF%CE%BD%CE%B7:south-aegean,greece/landscape/hd,view:live," target="_blank"></a>
           <img class="img-responsive" src="img/santorini.jpg" alt="santorini weather" title="santorini">
           <div class="caption">
             <div class="text-caption center-block">
@@ -62,7 +61,7 @@
     <div class="row row-example">
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/bali/all/hd,view:daylight,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/bali/all/hd,view:daylight," target="_blank"></a>
           <img class="img-responsive" src="img/bali.jpg" alt="bali weather" title="Bali">
           <div class="caption">
             <div class="text-caption center-block">
@@ -75,7 +74,7 @@
       </div>
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/-33.867850;151.207320-Sydney:new-south-wales,australia/landscape/hd,view:live,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/-33.867850;151.207320-Sydney:new-south-wales,australia/landscape/hd,view:live," target="_blank"></a>
           <img class="img-responsive" src="img/sydney.jpg" alt="sydney weather" title="Sydney">
           <div class="caption">
             <div class="text-caption center-block">
@@ -88,7 +87,7 @@
       </div>
       <div class="col-md-4">
         <div class="thumbnail text-center">
-          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/49.249660;-123.119340-Vancouver:british-columbia,canada/landscape/hd,view:live,"></a>
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/49.249660;-123.119340-Vancouver:british-columbia,canada/landscape/hd,view:live," target="_blank"></a>
           <img class="img-responsive" src="img/vancouver.jpg" alt="vancouver weather" title="vancouver">
           <div class="caption">
             <div class="text-caption center-block">
@@ -106,7 +105,7 @@
 <div ng-if="$ctrl.city.length">
   <nav class="navbar navbar-default">
     <ul class="nav nav-tabs">
-        <a href="#"><img id="logo" src="/img/logo.png" alt="logo"></a>
+        <a href="/"><img id="logo" src="/img/logo.png" alt="logo"></a>
         <form class="navbar-form navbar-right">
         <div class="form-group">
           <input id="navbar__right" type="text" class="form-control" placeholder="quel temps fait-il à ..." ng-model="city">
@@ -135,7 +134,7 @@
         <h2 class="text-center">Les webcams disponibles</h2>
         <div id="webcam__thumbnail" class="col-md-4" ng-repeat="webcam in $ctrl.webcams | limitTo: 6">
           <a id=webcams_links ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player" data-id={{webcam.id}} data-play="day"
-            href="https://lookr.com/{{webcam.id}}" webcamtarget="_blank">
+            href="https://lookr.com/{{webcam.id}}" target="_blank">
             <img class="img-responsive" src="{{webcam.image.current.preview}}" alt="bordeaux weather" title="Bordeaux">
             <div class="caption">
               <div class="text-caption center-block">

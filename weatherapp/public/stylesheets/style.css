@@ -26,7 +26,10 @@ body{
   height: 500px;
 }
 #bg-cold{
-  background-color: #BBDEFB;
+  background: url(../img/mountain.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  opacity: 0.85;
 }
 .block-weather{
   padding-left: 5%;
