@@ -77,12 +77,35 @@ img{
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.4);
 }
+#weather__row {
+  padding: 20px;
+}
+#weather__row .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  text-align: center;
+  font-weight: bold;
+  width: 93%;
+  height: 100%;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#weather__row .text-caption {
+  margin-top: 16%;
+}
+
 .thumbnail .caption {
   padding-top: 25%;
   color: #fff;
 }
 .text-caption{
   width: 60%;
+}
+.text-caption h4{
+  width: 100%;
+  color: white;
 }
 .row-example{
   margin-top: 2rem;
@@ -103,9 +126,11 @@ img{
 /*** page city ***/
 #webcams_links img{
   margin: 0 auto;
+  width: 100%;
 }
 .margin-webcam{
   margin-top: 2rem;
+}
 .card-link {
   position: absolute;
   top: 0;
@@ -118,4 +143,12 @@ img{
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+#webcam__thumbnail {
+  margin-bottom: 20px;
+}
+
+#webcam__thumbnail:hover {
+  opacity: 0.9;
 }
