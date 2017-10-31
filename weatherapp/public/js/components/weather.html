@@ -1,12 +1,12 @@
 <div ng-if="!$ctrl.city.length">
   <div class="container-fluid" id="bg-hp">
-    <img id="logo" src="/img/logo.png" alt="logo">
+    <a href="#"><img id="logo" src="/img/logo.png" alt="logo"></a>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <form ng-submit="$ctrl.getWeather(city)">
           <div class="form-group">
             <!--<label for="city">Ville</label>-->
-            <input type="text" class="form-control" id="city" placeholder="quelle temps fait-il à ..." ng-model="city">
+            <input type="text" class="form-control" id="city" placeholder="quel temps fait-il à ..." ng-model="city">
             <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </a>
@@ -14,87 +14,87 @@
         </form>
       </div>
     </div>
-    <div class="container-fluid block-example">
-      <h2 class="text-center">Découvrez la météo de nos villes</h2>
-      <div class="row row-example">
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/44.840440;-0.580500-Bordeaux:nouvelle-aquitaine,france/landscape/hd,view:live,"></a>
-            <img class="img-responsive" src="img/bordeaux.jpg" alt="bordeaux weather" title="Bordeaux">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Bordeaux</h3>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/34.052230;-118.243680-Los%20Angeles:california,united-states/landscape/hd,view:live,"></a>
-            <img class="img-responsive" src="img/la.jpg" alt="Los Angeles weather" title="Los Angeles">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Los Angeles</h3>
-                <hr>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/36.405720;25.456820-%CE%A3%CE%B1%CE%BD%CF%84%CE%BF%CF%81%CE%AF%CE%BD%CE%B7:south-aegean,greece/landscape/hd,view:live,"></a>
-            <img class="img-responsive" src="img/santorini.jpg" alt="santorini weather" title="santorini">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Santorini</h3>
-                <hr>
-              </div>
+  </div>
+  <div class="container-fluid block-example">
+    <h2 class="text-center">Découvrez la météo de nos villes</h2>
+    <div class="row row-example">
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/44.840440;-0.580500-Bordeaux:nouvelle-aquitaine,france/landscape/hd,view:live,"></a>
+          <img class="img-responsive" src="img/bordeaux.jpg" alt="bordeaux weather" title="Bordeaux">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Bordeaux</h3>
+              <hr>
             </div>
           </div>
         </div>
       </div>
-      <div class="row row-example">
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/bali/all/hd,view:daylight,"></a>
-            <img class="img-responsive" src="img/bali.jpg" alt="bali weather" title="Bali">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Bali</h3>
-                <hr>
-              </div>
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/34.052230;-118.243680-Los%20Angeles:california,united-states/landscape/hd,view:live,"></a>
+          <img class="img-responsive" src="img/la.jpg" alt="Los Angeles weather" title="Los Angeles">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Los Angeles</h3>
+              <hr>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/-33.867850;151.207320-Sydney:new-south-wales,australia/landscape/hd,view:live,"></a>
-            <img class="img-responsive" src="img/sydney.jpg" alt="sydney weather" title="Sydney">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Sydney</h3>
-                <hr>
-              </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/36.405720;25.456820-%CE%A3%CE%B1%CE%BD%CF%84%CE%BF%CF%81%CE%AF%CE%BD%CE%B7:south-aegean,greece/landscape/hd,view:live,"></a>
+          <img class="img-responsive" src="img/santorini.jpg" alt="santorini weather" title="santorini">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Santorini</h3>
+              <hr>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/49.249660;-123.119340-Vancouver:british-columbia,canada/landscape/hd,view:live,"></a>
-            <img class="img-responsive" src="img/vancouver.jpg" alt="vancouver weather" title="vancouver">
-            <div class="caption">
-              <div class="text-caption center-block">
-                <hr>
-                <h3 class="text-uppercase">Vancouver</h3>
-                <hr>
-              </div>
+      </div>
+    </div>
+    <div class="row row-example">
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/bali/all/hd,view:daylight,"></a>
+          <img class="img-responsive" src="img/bali.jpg" alt="bali weather" title="Bali">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Bali</h3>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/-33.867850;151.207320-Sydney:new-south-wales,australia/landscape/hd,view:live,"></a>
+          <img class="img-responsive" src="img/sydney.jpg" alt="sydney weather" title="Sydney">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Sydney</h3>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail text-center">
+          <a class="card-link" href="https://www.lookr.com/fr/explore#!explore/49.249660;-123.119340-Vancouver:british-columbia,canada/landscape/hd,view:live,"></a>
+          <img class="img-responsive" src="img/vancouver.jpg" alt="vancouver weather" title="vancouver">
+          <div class="caption">
+            <div class="text-caption center-block">
+              <hr>
+              <h3 class="text-uppercase">Vancouver</h3>
+              <hr>
             </div>
           </div>
         </div>
@@ -106,12 +106,12 @@
 <div ng-if="$ctrl.city.length">
   <nav class="navbar navbar-default">
     <ul class="nav nav-tabs">
-      <img id="logo" src="/img/logo.png" alt="logo">
-      <form class="navbar-form navbar-right">
+        <a href="#"><img id="logo" src="/img/logo.png" alt="logo"></a>
+        <form class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="quelle temps fait-il à ..." ng-model="city">
+          <input id="navbar__right" type="text" class="form-control" placeholder="quel temps fait-il à ..." ng-model="city">
         </div>
-        <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
+        <a class="btn btn-search navbar_right" ng-click="$ctrl.getWeather(city)">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </a>
       </form>
@@ -132,6 +132,7 @@
     </div>
     <div class="container-fluid center-block">
       <div class="row" id="weather__row">
+        <h2 class="text-center">Les webcams disponibles</h2>
         <div id="webcam__thumbnail" class="col-md-4" ng-repeat="webcam in $ctrl.webcams | limitTo: 6">
           <a id=webcams_links ng-if="$ctrl.webcams.status == active" name="lkr-timelapse-player" data-id={{webcam.id}} data-play="day"
             href="https://lookr.com/{{webcam.id}}" webcamtarget="_blank">
