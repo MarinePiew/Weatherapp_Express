@@ -27,7 +27,7 @@ angular.module('weatherApp')
         }
       }).then((response) => {
         defer.resolve(response.data);
-        webcam_data = response.data.result.webcams;
+        // webcam_data = response.data.result.webcams;
       }).catch((error) => {
         defer.reject(error.statusText);
       });
