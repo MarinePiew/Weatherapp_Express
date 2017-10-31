@@ -26,6 +26,11 @@ body{
 .block-weather{
   padding-left: 5%;
 }
+
+.block-weather img {
+  float: left;
+  width: 9%;
+}
 .btn-search{
   color: #606060;
   display: inline-block;
@@ -151,4 +156,15 @@ img{
 
 #webcam__thumbnail:hover {
   opacity: 0.9;
+}
+
+#logo {
+  width: 15%;
+  margin-left: 20px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.navbar-default .navbar-form {
+  margin-top: -76px;
 }

@@ -1,6 +1,6 @@
 <div ng-if="!$ctrl.city.length">
   <div class="container-fluid" id="bg-hp">
-    <h1>Weather App</h1>
+    <img id="logo" src="/img/logo.png" alt="logo">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <form ng-submit="$ctrl.getWeather(city)">
@@ -106,7 +106,7 @@
 <div ng-if="$ctrl.city.length">
   <nav class="navbar navbar-default">
     <ul class="nav nav-tabs">
-      <h1 class="inline-block">Weather App</h1>
+      <img id="logo" src="/img/logo.png" alt="logo">
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="quelle temps fait-il à ..." ng-model="city">
@@ -122,10 +122,11 @@
     <div class="container-fluid" id="bg-cold">
       <div class="block-weather">
         <div ng-repeat="city in $ctrl.city">
-          <h2 class="inline-block">{{city.name}}</h3>
-            <p class="inline-block">{{city.weather[0].description}}</p>
-            <img ng-src="{{city.weather[0].icon}}" />
-            <h3>{{city.main.temp | number:0}} °C</h3>
+          <img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" />
+          <h3>{{city.main.temp_min | number:0}}°C</h3>
+          <h3 class="inline-block">{{city.name}}</h3>
+          <p class="inline-block"> | {{city.weather[0].description}}</p>
+          <h4>{{city.main.humidity}}% d'humidité</h4>
         </div>
       </div>
     </div>
@@ -148,11 +149,5 @@
       </div>
     </div>
 
-
   </div>
-
-
-
-
-
 </div>
