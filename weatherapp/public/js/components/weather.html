@@ -1,4 +1,4 @@
-<div class="container-fluid" id="bg-hp" ng-if="!$ctrl.data">
+<div class="container-fluid" id="bg-hp" ng-if="$ctrl.city">
   <h1>Weather App</h1>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -14,7 +14,7 @@
     </div>
   </div>
 </div>
-<div class="container-fluid block-example" ng-if="!$ctrl.data">
+<div class="container-fluid block-example" ng-if="$ctrl.city">
   <h2 class="text-center">Exemples de météo</h2>
   <div class="row row-example">
     <div class="col-md-4">
@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<nav class="navbar navbar-default" ng-if="$ctrl.data">
+<nav class="navbar navbar-default" ng-if="!$ctrl.city">
   <ul class="nav nav-tabs">
     <h1 class="inline-block">Weather App</h1>
     <form class="navbar-form navbar-right">
@@ -111,13 +111,13 @@
   </ul>
 </nav>
 
-<div class="data-city" ng-if="$ctrl.data">
+<div class="data-city" ng-if="!$ctrl.city" ng-repeat="city in $ctrl.city">
   <div class="container-fluid" id="bg-cold">
     <div class="block-weather">
-      <h2 class="inline-block">{{$ctrl.data.name}}</h3>
-        <p class="inline-block">{{$ctrl.data.weather[0].description}}</p>
+      <h2 class="inline-block">{{$ctrl.city.name}}</h3>
+        <p class="inline-block">{{$ctrl.city.weather[0].description}}</p>
         <img ng-src="{{$ctrl.data.icon}}" />
-        <h3>{{$ctrl.data.main.temp | number:0}} °C</h3>
+        <h3>{{$ctrl.city.main.temp | number:0}} °C</h3>
     </div>
   </div>
   <div class="container-fluid">
