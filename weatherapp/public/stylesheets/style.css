@@ -27,7 +27,7 @@ h2{
   background: url(../img/mountain.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 500px;
+  height: 550px;
 }
 #bg-cold{
   background: url(../img/mountain.jpg) no-repeat center fixed;
@@ -37,6 +37,7 @@ h2{
 }
 .block-weather{
   padding-left: 5%;
+  color: #050509;
 }
 
 .block-weather img {
