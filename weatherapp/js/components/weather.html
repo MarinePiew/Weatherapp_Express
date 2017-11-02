@@ -1,11 +1,11 @@
 <div ng-if="!$ctrl.city.length">
   <div class="container-fluid" id="bg-hp">
-    <a href="#"><img id="logo" src="/img/logo.png" alt="logo"></a>
+    <a href="#"><img id="logo" src="img/logo.png" alt="logo"></a>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <form ng-submit="$ctrl.getWeather(city)">
           <div class="form-group">
-            <input type="text" class="form-control" id="city" placeholder="quel temps fait-il à ..." ng-model="city">
+            <input type="text" class="form-control list-inline" id="city" placeholder="quel temps fait-il à ..." ng-model="city">
             <a class="btn btn-search" ng-click="$ctrl.getWeather(city)">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </a>
@@ -105,14 +105,14 @@
 <div ng-if="$ctrl.city.length">
   <nav class="navbar navbar-default">
     <ul class="nav nav-tabs">
-        <a href="/"><img id="logo" src="/img/logo.png" alt="logo"></a>
+        <a href="/"><img id="logo" src="img/logo.png" alt="logo"></a>
         <form class="navbar-form navbar-right">
         <div class="form-group">
           <input id="navbar__right" type="text" class="form-control" placeholder="quel temps fait-il à ..." ng-model="city">
+          <a class="btn btn-search btn-search-city-page navbar_right" ng-click="$ctrl.getWeather(city)">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </a>
         </div>
-        <a class="btn btn-search navbar_right" ng-click="$ctrl.getWeather(city)">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </a>
       </form>
     </ul>
   </nav>
@@ -123,8 +123,8 @@
         <div ng-repeat="city in $ctrl.city">
           <img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" />
           <h3>{{city.main.temp_min | number:0}}°C</h3>
-          <h3 class="inline-block">{{city.name}}</h3>
-          <p class="inline-block"> | {{city.weather[0].description}}</p>
+          <h3 class="list-inline">{{city.name}}</h3>
+          <p class="list-inline"> | {{city.weather[0].description}}</p>
           <h4>{{city.main.humidity}}% d'humidité</h4>
         </div>
       </div>

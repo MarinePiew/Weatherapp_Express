@@ -1,28 +1,24 @@
-body{
+html, body{
   overflow-x: hidden;
+  max-width: 100%;
 }
 .navbar{
   margin-bottom: 0px !important;
-}
-
-#navbar__right {
-  width: 200px;
 }
 h2{
   font-family: 'Kaushan Script', cursive;
   font-size: 50px;
   padding-bottom: 20px;
 }
-.text-uppercase{
-  text-transform: uppercase;
-}
-.inline-block{
-  display: inline-block;
+h3, h3 p{
+  font-weight: bold;
 }
 .container-fluid{
   margin: 0;
   padding: 0;
 }
+
+/*HP*/
 #bg-hp{
   background: url(../img/mountain.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
@@ -39,7 +35,6 @@ h2{
   padding-left: 5%;
   color: #050509;
 }
-
 .block-weather img {
   float: left;
   width: 9%;
@@ -54,7 +49,6 @@ h2{
   background-color: #fff;
   margin-bottom: 5px;
 }
-
 input:focus { 
   border: 1px solid #ccc;;
 }
@@ -62,7 +56,6 @@ input:focus {
   height: 5.5rem;
   margin-top: 15%;
   font-size: 2rem;
-  width: 88%;
   display: inline-block;
 }
 .block-example{
@@ -71,7 +64,6 @@ input:focus {
 img{
   display: block;
 }
-
 /*** block image example ***/
 .thumbnail {
   position: relative;
@@ -182,9 +174,8 @@ img{
 }
 
 /* FOOTER CSS */
-.footer {
+footer {
   background: #F4F4F4;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
@@ -205,6 +196,50 @@ img{
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
+footer .fa-heart {
   color: #D23333;
+}
+
+/* MOBILE */
+@media screen and (min-width: 769px){
+  #city{
+    width: 88%;
+  }
+  #navbar__right {
+    width: 200px;
+  }
+  .btn-search-city-page{
+    background-color: inherit !important;
+  }
+  footer{
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  #logo{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .navbar-default .navbar-form{
+    margin-top: 3%;
+  }
+  .form-group{
+    margin: 0 1rem;
+  }
+  .btn-search{
+    margin-top: 1rem;
+  }
+  .btn-search-city-page{
+    border: 1px solid #d7d7d7 !important;
+  }
+  #bg-hp{
+    height: 400px;
+  }
+  #navbar__right{
+    height: 5.5rem;
+    font-size: 2rem;
+  }
+  footer{
+    padding: 2rem;
+  }
 }
