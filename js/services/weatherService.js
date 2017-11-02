@@ -4,7 +4,7 @@ angular.module('weatherApp')
 
   .service('WeatherService', function ($http, $q) {
 
-    const API_URL = "://api.openweathermap.org/data/2.5/weather?lang=fr&units=metric&q=";
+    const API_URL = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lang=fr&units=metric&q=";
     const API_KEY = "7c5ce78a2ff0501fc1657cf229981aac";
 
     this.get = (city) => {
