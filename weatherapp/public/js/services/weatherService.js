@@ -13,7 +13,7 @@ angular.module('weatherApp')
       $http.get(`${API_URL}${city}&APPID=${API_KEY} `).then((response) => {
         let CITY_DATA = this.webcam(response);
         defer.resolve(response);
-       }).catch((error) => {
+      }).catch((error) => {
         defer.reject(error.statusText);
       });
       return defer.promise;

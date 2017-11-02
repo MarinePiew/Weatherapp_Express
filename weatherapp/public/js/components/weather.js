@@ -17,16 +17,16 @@ angular.module('weatherApp')
           this.city.push(data.data);
           WeatherService.webcam(data).then((data) => {
             data.result.webcams.forEach((webcam) => {
-            this.webcams.push(webcam);
+              this.webcams.push(webcam);
             });
-        }).catch((error) => {
-          this.error = error;
+          }).catch((error) => {
+            this.error = error;
+          });
         });
-      });
 
-      this.city = [];
-      this.webcams = [];
-    }
-  },
+        this.city = [];
+        this.webcams = [];
+      }
+    },
 
   });
